@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.banner-bg-image {
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.2)
+    ),
+    url("http://res.cloudinary.com/du0uabbwo/image/upload/v1728584481/zxfdjczop3oh7f9d9tcr.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

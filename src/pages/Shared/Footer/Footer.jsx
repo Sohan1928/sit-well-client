@@ -34,8 +34,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </div>
-
-      <aside className="pb-4 text-center bg-base-200">
+      <aside className="pb-6 text-center bg-base-200">
         <p className="px-6">
           Copyright © {new Date().getFullYear()} - All right reserved by{" "}
           <span className="font-bold">Sit Well Co.</span>

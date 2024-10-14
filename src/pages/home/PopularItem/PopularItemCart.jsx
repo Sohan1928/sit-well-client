@@ -5,7 +5,7 @@ const PopularItemCart = ({ popularItem }) => {
     popularItem;
 
   return (
-    <div className="flex items-center gap-4 p-3 rounded-lg shadow-xl md:p-4">
+    <div className="flex items-center gap-4 p-3 border rounded-lg shadow-xl md:p-4">
       <div>
         <img
           className="h-[200px] md:h-[230px] shadow-md rounded-lg w-[450px]"
@@ -27,7 +27,7 @@ const PopularItemCart = ({ popularItem }) => {
         <p>
           Price: <span className="font-bold text-orange-500">${price}</span>
         </p>
-        <button className="px-4 py-2 mt-2 font-semibold text-white bg-blue-500 rounded-lg hover:bg-orange-500">
+        <button className="px-4 py-2 mt-2 font-semibold text-white bg-blue-500 rounded-sm hover:bg-orange-500">
           {viewDetails}
         </button>
       </div>

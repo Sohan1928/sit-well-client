@@ -6,10 +6,18 @@ import ToggleTheme from "./ToggleTheme";
 const Navbar = () => {
   const NavLinks = (
     <nav className="flex flex-col gap-3 font-bold md:flex-row md:items-center md:gap-6 md:text-base">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/shop">Shop</NavLink>
-      <NavLink to="/collection">Collection</NavLink>
-      <NavLink to="/contactUs">Contact Us</NavLink>
+      <NavLink className="hover:text-[#ff8604]" to="/">
+        Home
+      </NavLink>
+      <NavLink className="hover:text-[#ff8604]" to="/shop">
+        Shop
+      </NavLink>
+      <NavLink className="hover:text-[#ff8604]" to="/collection">
+        Collection
+      </NavLink>
+      <NavLink className="hover:text-[#ff8604]" to="/contactUs">
+        Contact Us
+      </NavLink>
     </nav>
   );
 

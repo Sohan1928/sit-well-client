@@ -21,7 +21,7 @@ const Banner = () => {
           <div className="pt-8 ml-6 md:ml-12 md:pt-16">
             <h1 className="flex flex-col text-2xl font-bold text-white md:text-5xl">
               <span>
-                Join to Our {text}
+                Join to Our <span className="text-orange-500">{text}</span>
                 <Cursor cursorColor="orange"></Cursor>
               </span>
             </h1>

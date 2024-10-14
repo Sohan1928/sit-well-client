@@ -1,9 +1,12 @@
 import React from "react";
+import { FaFacebook } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <div>
-      <div className="p-10 mx-auto footer bg-base-200 text-base-content max-w-7xl">
+    <div className="mx-auto bg-base-200">
+      <div className="p-10 mx-auto footer max-w-7xl text-base-content">
         <div>
           <h1 className="text-2xl font-bold md:text-4xl text-nowrap">
             <span className="text-blue-600">Sit</span>{" "}
@@ -12,6 +15,11 @@ const Footer = () => {
           <p className="mt-4 font-bold ">123 Satkhira, Khulna, Bangladesh</p>
           <p className="font-bold ">Phone: +123-456-7890</p>
           <p className="font-bold ">Email: example@gmail.com</p>
+          <div className="flex items-center gap-3 text-2xl">
+            <FaFacebook className="hover:text-blue-600"></FaFacebook>
+            <FaInstagram className="hover:text-orange-500"></FaInstagram>
+            <FaLinkedinIn className="hover:text-blue-600"></FaLinkedinIn>
+          </div>
         </div>
         <nav>
           <h6 className="text-xl font-bold">Services</h6>

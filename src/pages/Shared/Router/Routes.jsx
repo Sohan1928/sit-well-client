@@ -1,8 +1,8 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Navbar from "../pages/Shared/Navbar/Navbar";
-import Footer from "../pages/Shared/Footer/Footer";
 import { Helmet } from "react-helmet-async";
+import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 const Routes = () => {
   return (

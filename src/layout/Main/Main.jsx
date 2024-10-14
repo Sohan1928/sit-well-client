@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Routes from "../../routes/Routes";
 import Home from "../../pages/home/Home/Home";
 import Shop from "../../pages/home/Shop/Shop";
 import Collection from "../../pages/home/Collection/Collection";
 import ContactUs from "../../pages/home/ContactUs/ContactUs";
 import ErrorPage from "../../pages/Shared/Error/ErrorPage";
 import Login from "../../pages/Shared/Login/Login";
+import Routes from "../../pages/Shared/Router/Routes";
 
 const router = createBrowserRouter([
   {

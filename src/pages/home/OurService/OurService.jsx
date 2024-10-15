@@ -7,7 +7,7 @@ const OurService = () => {
   return (
     <div className="px-4 mx-auto my-6 max-w-7xl">
       <SectionTitle
-        heading={"Our Service"}
+        heading={"See the lineup"}
         subHeading={"How It Works"}
       ></SectionTitle>
       <div className="items-center justify-around mx-auto mt-6 text-center md:flex md:mt-12">

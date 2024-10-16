@@ -4,6 +4,7 @@ import PopularItem from "../PopularItem/PopularItem";
 import Winner from "../Winner/Winner";
 import TopBuyer from "../TopBuyer/TopBuyer";
 import OurService from "../OurService/OurService";
+import CustomerFeedback from "../CustomerFeedback/CustomerFeedback";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Winner></Winner>
       <TopBuyer></TopBuyer>
       <OurService></OurService>
+      <CustomerFeedback></CustomerFeedback>
     </div>
   );
 };

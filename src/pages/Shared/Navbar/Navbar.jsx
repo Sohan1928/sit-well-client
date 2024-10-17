@@ -22,7 +22,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="mx-auto md:px-12 navbar max-w-7xl">
+    <div className="sticky top-0 z-10 mx-auto bg-white md:px-12 navbar max-w-7xl">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +60,7 @@ const Navbar = () => {
       {/* large device */}
       <div className="md:navbar-end">
         <div className="hidden lg:flex">
-          <ul className="flex items-center gap-10 px-1 menu menu-horizontal">
+          <ul className="flex items-center gap-10 px-1 text-black menu menu-horizontal">
             {NavLinks}
           </ul>
         </div>

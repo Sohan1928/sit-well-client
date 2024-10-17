@@ -4,25 +4,21 @@ import { useState, useEffect } from "react";
 const Shop = () => {
   const chairs = useLoaderData();
   const [activeCategory, setActiveCategory] = useState("Gaming");
-  const [currentPage, setCurrentPage] = useState(1); // For pagination
-  const [chairsPerPage] = useState(6); // Showing 6 items per page
-  const [loading, setLoading] = useState(true); // Spinner state
+  const [currentPage, setCurrentPage] = useState(1);
+  const [chairsPerPage] = useState(6);
+  const [loading, setLoading] = useState(true);
 
-  // Loading spinner until data is fetched
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000); // simulating delay for spinner (1 second)
-
+    }, 1000);
     return () => clearTimeout(timer);
   }, []);
 
-  // Filter data based on category
   const filteredChairs = chairs.filter(
     (chair) => chair.category === activeCategory
   );
 
-  // Pagination logic
   const indexOfLastChair = currentPage * chairsPerPage;
   const indexOfFirstChair = indexOfLastChair - chairsPerPage;
   const currentChairs = filteredChairs.slice(
@@ -30,7 +26,6 @@ const Shop = () => {
     indexOfLastChair
   );
 
-  // Change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   if (loading) {
@@ -45,7 +40,7 @@ const Shop = () => {
 
   return (
     <div className="px-4 mx-auto mb-6 max-w-7xl">
-      <div className="flex justify-center my-4 tablist">
+      <div className="sticky z-10 flex justify-center my-4 top-20 tablist">
         {["Gaming", "Business", "Study", "Normal"].map((category) => (
           <button
             key={category}
@@ -56,7 +51,7 @@ const Shop = () => {
             }`}
             onClick={() => {
               setActiveCategory(category);
-              setCurrentPage(1); // Reset to page 1 when category changes
+              setCurrentPage(1);
             }}
           >
             {category}
@@ -75,14 +70,13 @@ const Shop = () => {
             <h3 className="mt-2 text-xl font-bold">{chair.title}</h3>
             <p>{chair.description}</p>
             <p className="font-semibold text-green-600">${chair.price}</p>
-            <button className="px-4 py-2 mt-2 text-white bg-blue-500 rounded">
+            <button className="px-4 py-2 mt-2 text-white bg-blue-500 rounded hover:bg-orange-500">
               {chair.viewDetails}
             </button>
           </div>
         ))}
       </div>
 
-      {/* Pagination */}
       <div className="flex justify-center mt-6">
         {Array.from(
           { length: Math.ceil(filteredChairs.length / chairsPerPage) },

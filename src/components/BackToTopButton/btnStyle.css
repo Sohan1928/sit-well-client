@@ -1,0 +1,24 @@
+.back-to-top {
+  position: fixed;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+
+.back-to-top.show {
+  display: flex;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.back-to-top:hover {
+  transform: scale(1.2);
+}

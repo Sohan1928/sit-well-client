@@ -20,6 +20,7 @@ const router = createBrowserRouter([
       {
         path: "/shop",
         element: <Shop></Shop>,
+        loader: () => fetch("/chair.json"),
       },
       {
         path: "/collection",

@@ -17,7 +17,7 @@ const OurService = () => {
             src="http://res.cloudinary.com/du0uabbwo/image/upload/v1729018154/ejssajlnntc3qwtgufse.png"
             alt=""
           />
-          <h2 className="mt-3 font-bold md:text-xl">Buy to our Shop</h2>
+          <h2 className="mt-3 font-bold md:text-xl">Buy from our Shop</h2>
           <p className="md:w-44">Choose your product and buy this product.</p>
         </div>
         <HiChevronDoubleRight className="items-center hidden text-2xl font-bold md:text-7xl md:flex"></HiChevronDoubleRight>

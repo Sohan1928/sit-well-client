@@ -2,7 +2,7 @@ import React from "react";
 
 const CustomerFeedback = () => {
   return (
-    <div className="py-16 mx-auto my-16 rounded-md bg-stone-100 max-w-7xl">
+    <div className="py-8 mx-auto my-12 rounded-md bg-indigo-50 max-w-7xl">
       <div className="text-center">
         <img
           className="h-20 mx-auto mb-4"

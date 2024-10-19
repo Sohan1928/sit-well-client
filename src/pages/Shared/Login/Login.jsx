@@ -24,7 +24,7 @@ const Login = () => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "User login successfully",
+          title: "User Login Successfully",
         });
         console.log(result);
 
@@ -45,6 +45,11 @@ const Login = () => {
       const result = await signInWithPopup(auth, provider);
       // The signed-in user info
       const user = result.user;
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "User Login Successfully",
+      });
       console.log("Logged in User: ", user);
       // Navigate to home or dashboard after successful login
       navigate("/");

@@ -27,9 +27,11 @@ const SignUp = () => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "User created successfully",
+          title: "User Created Successfully",
         });
         console.log(result);
+
+        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
@@ -43,7 +45,7 @@ const SignUp = () => {
       Swal.fire({
         position: "center",
         icon: "success",
-        title: "User created successfully",
+        title: "User Created Successfully",
       });
       console.log("User Info: ", user);
       navigate("/");

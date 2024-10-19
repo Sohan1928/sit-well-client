@@ -6,7 +6,6 @@ import ErrorPage from "../../pages/Shared/Error/ErrorPage";
 import Login from "../../pages/Shared/Login/Login";
 import Routes from "../../pages/Shared/Router/Routes";
 import SignUp from "../../pages/Shared/SignUp/SignUp";
-import PrivateRoutes from "../../pages/Shared/Router/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -20,11 +19,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: (
-          <PrivateRoutes>
-            <Shop></Shop>
-          </PrivateRoutes>
-        ),
+        element: <Shop></Shop>,
         loader: () => fetch("/chair.json"),
       },
       {

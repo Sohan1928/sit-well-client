@@ -1,76 +1,83 @@
 import React, { useContext } from "react";
 import { Helmet } from "react-helmet-async";
 import googleImg from "../../../../public/Images/google.png";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import Swal from "sweetalert2";
 import { signInWithPopup } from "firebase/auth";
 import { provider } from "../../../Firebase/firebase.config";
 
-const Login = () => {
-  const { signIn, auth } = useContext(AuthContext);
-  const location = useLocation();
+const SignUp = () => {
+  const { createUser, auth } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-    const form = e.target;
+  const handleSignUp = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const name = form.name.value;
     const email = form.email.value;
     const password = form.password.value;
-    // console.log(email, password);
+    console.log(name, email, password);
     // form.reset();
-    signIn(email, password)
+
+    // create user
+    createUser(email, password)
       .then((result) => {
         Swal.fire({
           position: "center",
           icon: "success",
-          title: "User login successfully",
+          title: "User created successfully",
         });
         console.log(result);
-
-        navigate(location?.state ? location.state : "/");
       })
       .catch((error) => {
         console.error(error);
-        Swal.fire({
-          icon: "error",
-          title: "Oops...",
-          text: "Please check your email and password",
-        });
       });
   };
 
-  const handleGoogleLogin = async () => {
+  const handleGoogleSignUp = async () => {
     try {
       const result = await signInWithPopup(auth, provider);
-      // The signed-in user info
       const user = result.user;
-      console.log("Logged in User: ", user);
-      // Navigate to home or dashboard after successful login
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "User created successfully",
+      });
+      console.log("User Info: ", user);
       navigate("/");
     } catch (error) {
-      console.log("Error during Google Login: ", error.message);
+      console.log("Error during Google Sign In: ", error.message);
     }
   };
 
   return (
     <div className="px-4 mx-auto my-8 max-w-7xl">
       <Helmet>
-        <title>Sit Well | LogIn</title>
+        <title>Sit Well | SignUp</title>
       </Helmet>
       <div>
         <div className="justify-center px-4 py-8 mx-auto bg-white rounded-sm shadow-md md:px-6 shadow-black md:w-96">
           <h1 className="mb-6 text-2xl font-bold text-black md:text-4xl">
-            LogIn
+            Please Sign Up
           </h1>
-          <form onSubmit={handleLogin} className="flex flex-col gap-6">
+          <form onSubmit={handleSignUp} className="flex flex-col gap-6">
+            <input
+              className="px-3 py-3 text-black border border-blue-500 rounded-sm"
+              type="text"
+              name="name"
+              required
+              placeholder="Your Name"
+              id="1"
+            />
             <input
               className="px-3 py-3 text-black border border-blue-500 rounded-sm"
               type="email"
               name="email"
               required
               placeholder="Email"
-              id="1"
+              id="2"
             />
             <input
               className="px-3 py-3 text-black border border-blue-500 rounded-sm"
@@ -78,15 +85,15 @@ const Login = () => {
               name="password"
               required
               placeholder="Password"
-              id="2"
+              id="3"
             />
             <div className="flex flex-col w-full border-opacity-50">
               <button className="py-3 mt-4 font-bold text-white bg-blue-500 rounded-sm md:text-xl hover:bg-orange-500">
-                LogIn
+                Sign Up
               </button>
               <div className="text-black divider">or</div>
               <button
-                onClick={handleGoogleLogin}
+                onClick={handleGoogleSignUp}
                 className="flex items-center justify-center gap-3 py-3 mt-2 font-bold text-center text-black border border-blue-500 rounded-sm md:text-xl"
               >
                 <img className="h-6" src={googleImg} alt="" />
@@ -94,9 +101,9 @@ const Login = () => {
               </button>
               <div className="mt-4 text-black">
                 <h4>
-                  New to Sit Well?{" "}
-                  <Link to="/signUp" className="font-bold underline">
-                    Sign Up
+                  Already have an account?{" "}
+                  <Link to="/login" className="font-bold underline">
+                    Please Login
                   </Link>
                 </h4>
               </div>
@@ -108,4 +115,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default SignUp;

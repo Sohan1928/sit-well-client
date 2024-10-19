@@ -12,9 +12,6 @@ const Navbar = () => {
       <NavLink className="hover:text-[#ff8604]" to="/shop">
         Shop
       </NavLink>
-      <NavLink className="hover:text-[#ff8604]" to="/collection">
-        Collection
-      </NavLink>
       <NavLink className="hover:text-[#ff8604]" to="/contactUs">
         Contact Us
       </NavLink>
@@ -28,7 +25,7 @@ const Navbar = () => {
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              className="w-5 h-5"
+              className="w-5 h-5 text-black"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -68,7 +65,7 @@ const Navbar = () => {
           <div className="">
             <Link
               to="/login"
-              className="border border-[#6256ca] md:px-3 md:py-1.5 px-2 py-1 rounded-lg font-bold text-[#6256ca] hover:bg-[#ff8604] hover:text-white flex items-center"
+              className="md:px-3 md:py-1.5 px-3 py-1 rounded-sm font-bold hover:bg-[#ff8604] bg-blue-500 text-white flex items-center"
             >
               LogIn
             </Link>

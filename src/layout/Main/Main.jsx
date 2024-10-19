@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../../pages/home/Home/Home";
 import Shop from "../../pages/home/Shop/Shop";
-import Collection from "../../pages/home/Collection/Collection";
 import ContactUs from "../../pages/home/ContactUs/ContactUs";
 import ErrorPage from "../../pages/Shared/Error/ErrorPage";
 import Login from "../../pages/Shared/Login/Login";
 import Routes from "../../pages/Shared/Router/Routes";
+import SignUp from "../../pages/Shared/SignUp/SignUp";
+import PrivateRoutes from "../../pages/Shared/Router/PrivateRoutes";
 
 const router = createBrowserRouter([
   {
@@ -19,12 +20,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/shop",
-        element: <Shop></Shop>,
+        element: (
+          <PrivateRoutes>
+            <Shop></Shop>
+          </PrivateRoutes>
+        ),
         loader: () => fetch("/chair.json"),
-      },
-      {
-        path: "/collection",
-        element: <Collection></Collection>,
       },
       {
         path: "/contactUs",
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/signUp",
+        element: <SignUp></SignUp>,
       },
     ],
   },

@@ -9,17 +9,17 @@ const CustomerFeedback = () => {
           src="http://res.cloudinary.com/du0uabbwo/image/upload/v1729084116/eg31yxordcgglh7a4mwd.png"
           alt=""
         />
-        <h1 className="mb-6 text-2xl font-bold md:text-4xl">
+        <h1 className="mb-6 text-2xl font-bold text-black md:text-4xl">
           Customer Feedback
         </h1>
-        <p className="px-4 mx-auto md:px-0 md:w-1/2 opacity-80">
+        <p className="px-4 mx-auto text-black md:px-0 md:w-1/2 opacity-80">
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione
           tempora iusto tenetur officiis id repudiandae. Placeat natus labore
           impedit unde?
         </p>
         <div className="mt-4 join md:ml-12">
           <input
-            className="py-3 pl-4 border rounded-l-lg"
+            className="py-3 pl-4 text-black border rounded-l-lg"
             type="text"
             name=""
             placeholder="example@gmail.com"

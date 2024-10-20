@@ -4,7 +4,7 @@ import Marquee from "react-marquee-slider";
 
 const TopBuyer = () => {
   return (
-    <div className="px-4 mx-auto my-10 max-w-7xl">
+    <div className="px-4 mx-auto my-10 md:px-8 max-w-7xl">
       <SectionTitle
         heading={"Top Buyer"}
         subHeading={"Best buyer of our shop"}

@@ -8,7 +8,7 @@ import CustomerFeedback from "../CustomerFeedback/CustomerFeedback";
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <Banner></Banner>
       <PopularItem></PopularItem>
       <Winner></Winner>

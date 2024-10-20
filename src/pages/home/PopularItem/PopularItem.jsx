@@ -18,7 +18,11 @@ const PopularItem = () => {
         subHeading={"Top Popular Products"}
       ></SectionTitle>
 
-      <div className="grid gap-4 mx-4 my-8 md:mx-8 md:grid-cols-3">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="1400"
+        className="grid gap-4 mx-4 my-8 md:mx-8 md:grid-cols-3"
+      >
         {popularItems
           .filter((item) => item.price > 300)
           .map((popularItem) => (

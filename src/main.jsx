@@ -6,6 +6,10 @@ import router from "./layout/Main/Main";
 import { HelmetProvider } from "react-helmet-async";
 import BackToTopButton from "./components/BackToTopButton/BackToTopButton";
 import AuthProvider from "./Providers/AuthProvider";
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>

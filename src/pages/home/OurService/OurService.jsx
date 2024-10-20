@@ -10,7 +10,11 @@ const OurService = () => {
         heading={"See the lineup"}
         subHeading={"How It Works"}
       ></SectionTitle>
-      <div className="items-center justify-around mx-auto mt-6 text-center md:flex md:mt-12">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        className="items-center justify-around mx-auto mt-6 text-center md:flex md:mt-12"
+      >
         <div className="flex flex-col items-center p-2 border border-orange-300 rounded-md shadow-md md:w-60 md:h-80 shadow-orange-100">
           <img
             className="w-40"

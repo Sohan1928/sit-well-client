@@ -9,7 +9,11 @@ const Winner = () => {
         subHeading={"Our Best Customer This Month"}
       ></SectionTitle>
 
-      <div className="flex flex-col gap-12 mt-8 md:gap-36 md:flex-row">
+      <div
+        data-aos="zoom-in"
+        data-aos-duration="2000"
+        className="flex flex-col gap-12 mt-8 md:gap-36 md:flex-row"
+      >
         <div className="mx-auto md:w-4/5 md:ml-8">
           <h1 className="text-2xl font-bold md:text-4xl">
             Congratulations Sohanur Rahman
